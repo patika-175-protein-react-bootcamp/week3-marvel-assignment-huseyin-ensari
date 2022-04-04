@@ -1,16 +1,29 @@
 # week3 case
 
-https://developer.marvel.com/ API ını kullanarak geçen hafta ki çalışmanızı devam ettirmeniz istenmektedir.
+## [Click to try the live version](https://huseyin-react-marvel-1.netlify.app/)
 
-**HEDEF** : Bir React.JS projesi içerisinde API a istek atarak belirli dataları göstermek ve sayfalamak.
+> **Note :** The project is not intentionally divided into components.
 
-**İsterler**
-++ Api üzerinde bulunan pagination yapısı ile projenizde pagination yapmanız istenmektedir. Her sayfa değişiminde istek atılarak o sayfaya ait data gelecektir. Ancak geri dönüldüğünde **local storage % session storage** üzerinden data alınması sağlanmalıdır. Sayfada geri dönüldüğünde istek atılmamalıdır.
+---
 
-++ useEffect, useState hooks kullanımına özen gösterilmelidir.
+When the site is entered, the necessary data is saved to the session storage. When the page is re-entered, no load is created on the api.
 
-++ Axios kullanmanız önerilir.
+This is what is meant in the image below.
 
-++ CSS, HTML, JS ile devam edeceğiz. Projenizde ekstra CSS sablonları v.s kullanmayınız.
+![responsive](./forReadme/marvel-react-full.gif)
 
+---
 
+An example of the responsive work of the site is the following image.
+
+![responsive](./forReadme/marvel-react-responsive.gif)
+
+---
+
+If you want to try the project in your local. Download(or clone) the project. Create .env file in home directory and fill it as below.
+
+```bash
+REACT_APP_API_BASE_URL = https://gateway.marvel.com
+REACT_APP_PUBLIC_KEY = < your public api key >
+REACT_APP_PRIVATE_KEY = < your private api key >
+```

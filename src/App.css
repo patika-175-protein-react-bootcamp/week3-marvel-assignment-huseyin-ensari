@@ -1,0 +1,211 @@
+/* ------------------------------------------------ configs*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html body {
+    min-height: 100vh;
+}
+body {
+    background-color: #222222;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+/* ------------------------------------------------ end of configs*/
+/* ------------------------------------------------ layout*/
+#parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------------------------ end of layout*/
+/* ------------------------------------------------ header*/
+#header {
+    position: relative; 
+}
+#allheros {
+    width: 100%;
+    height: auto;
+}
+#marvel-logo-img {
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 30%;
+    max-width: 600px;
+    height: auto;
+}
+/* ------------------------------------------------ end of header*/
+/* ------------------------------------------------ hero list*/
+#hero-list {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    margin-bottom: 90px;
+    row-gap: 10px;
+}
+.card {
+    flex: 25%;
+    padding: 5px;
+    cursor: pointer;
+}
+.card:hover{
+    animation:blink-2 .9s both
+}
+@keyframes blink-2{0%{opacity:1}50%{opacity:.2}100%{opacity:1}}
+.divider {
+    width: 216px;
+    height: 1px;
+    background-color: #fff;
+    margin: 10px auto 3rem auto;
+}
+.img-frame {
+    border: #ffffff 1px solid;
+    margin: 0 auto;
+    position: relative;
+    width: 252px;
+    height: 360px;
+    text-align: center;
+}
+.hero-image {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+}
+#hero-name {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+/* ------------------------------------------------ end hero list*/
+/* ------------------------------------------------ pagination*/
+#pagination {
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------ pagination button settings */
+#pagination button {
+    background-color: #222222;
+    color: #7e7e7e;
+    border: 0;
+    float: left;
+    padding: 8px 28px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+#pagination button:hover {
+    background-color: #7e7e7e;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#pagination button.active {
+    background-color: #7e7e7e;
+    color: #222222;
+    border-radius: 30px;
+}
+button:disabled,
+button[disabled] {
+    background-color: #222222;
+    color: #7e7e7e;
+    border: 0;
+    float: left;
+    padding: 8px 28px;
+    cursor: help;
+}
+
+#pagination-section {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-bottom: 200px;
+}
+/* ------------------------------------------------ end of pagination*/
+/* ------------------------------------------------ Responsive */
+@media screen and (max-width: 980px) {
+    #pagination {
+        width: 70vw;
+    }
+    #pagination-section {
+        width: 50vw;
+    }
+    #pagination button {
+        padding: 8px 15px;
+    }
+}
+@media screen and (max-width: 730px) {
+    #pagination {
+        width: 80vw;
+    }
+    #pagination-section {
+        width: 80vw;
+    }
+    #pagination button {
+        padding: 4px 8px;
+    }
+}
+@media screen and (max-width: 680px) {
+    #pagination {
+        width: 70vw;
+    }
+    #pagination-section {
+        width: 70vw;
+    }
+    #pagination button {
+        padding: 4px 8px;
+    }
+}
+@media screen and (max-width: 350px) {
+    #pagination {
+        width: 100vw;
+    }
+    #pagination-section {
+        width: 100vw;
+    }
+    #pagination button {
+        padding: 4px 8px;
+    }
+}
+/* ------------------------------------------------ end of Responsive */
+/* ------------------------------------------------ Loading Component */
+#loading {
+    margin-top: 10vh;
+    margin-right: auto;
+    margin-left: auto;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+/* ------------------------------------------------ end of Loading Component */
